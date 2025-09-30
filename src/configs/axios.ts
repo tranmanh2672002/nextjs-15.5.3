@@ -68,6 +68,7 @@ function addRequestInterceptor(instance: AxiosInstance) {
           try {
             const baseUrl = instance.defaults.baseURL
             const refreshToken = getCookie(COOKIES.REFRESH_TOKEN)
+            // TODO: change to the correct url
             const refreshTokenUrl = `${baseUrl}/api/v1/auth/refresh-token`
             const rs = await axios.post(
               refreshTokenUrl,

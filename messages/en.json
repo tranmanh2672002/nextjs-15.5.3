@@ -1,0 +1,13 @@
+{
+  "navigate": {
+    "login": "Login",
+    "sign-up": "Sign Up",
+    "dashboard": "Dashboard",
+    "reels": "Reels"
+  },
+  "user": {
+    "reels": {
+      "title": "Reels English"
+    }
+  }
+}

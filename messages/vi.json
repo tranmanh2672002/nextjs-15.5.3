@@ -1,0 +1,13 @@
+{
+  "navigate": {
+    "login": "Đăng nhập",
+    "sign-up": "Đăng ký",
+    "dashboard": "Bảng điều khiển",
+    "reels": "Reels"
+  },
+  "user": {
+    "reels": {
+      "title": "Reels Vietnamese"
+    }
+  }
+}
