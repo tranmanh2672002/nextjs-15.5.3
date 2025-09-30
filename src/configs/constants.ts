@@ -5,4 +5,5 @@ export enum COOKIES {
   REFRESH_TOKEN = 'refresh_token',
   ROLE = 'role',
   SIDEBAR_STATE = 'sidebar_state',
+  LOCALE = 'locale',
 }

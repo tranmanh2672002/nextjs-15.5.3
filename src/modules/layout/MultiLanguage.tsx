@@ -1,6 +1,7 @@
 'use client'
 
 import { Button } from '@/components/ui'
+import { COOKIES } from '@/configs/constants'
 import { useCookiesNext } from 'cookies-next'
 import { useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
@@ -15,7 +16,7 @@ export const MultiLanguage = () => {
 
   const switchLocalePath = (newLocale: string) => {
     setCurrentLocale(newLocale)
-    cookies.setCookie('locale', newLocale)
+    cookies.setCookie(COOKIES.LOCALE, newLocale)
     router.refresh()
   }
 
