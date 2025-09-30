@@ -9,5 +9,10 @@
     "reels": {
       "title": "Reels Vietnamese"
     }
+  },
+  "header": {
+    "login": "Đăng nhập",
+    "sign-up": "Đăng ký",
+    "guest": "Khách"
   }
 }

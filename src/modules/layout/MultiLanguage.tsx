@@ -5,7 +5,7 @@ import { useLocale } from 'next-intl'
 import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
-import { Button } from '@/components/ui'
+import { SelectCustom } from '@/components/custom/select-custom'
 import { COOKIES } from '@/configs/constants'
 
 export const MultiLanguage = () => {
@@ -15,6 +15,11 @@ export const MultiLanguage = () => {
 
   const [currentLocale, setCurrentLocale] = useState(locale)
 
+  const options = [
+    { label: 'English', value: 'en' },
+    { label: 'Vietnamese', value: 'vi' },
+  ]
+
   const switchLocalePath = (newLocale: string) => {
     setCurrentLocale(newLocale)
     cookies.setCookie(COOKIES.LOCALE, newLocale)
@@ -22,12 +27,14 @@ export const MultiLanguage = () => {
   }
 
   return (
-    <div>
-      <div>{currentLocale}</div>
-      <div className="flex gap-2">
-        <Button onClick={() => switchLocalePath('vi')}>Switch to Vietnamese</Button>
-        <Button onClick={() => switchLocalePath('en')}>Switch to English</Button>
-      </div>
+    <div className="flex gap-2">
+      <SelectCustom
+        options={options}
+        onChange={(value) => switchLocalePath(value as string)}
+        value={currentLocale}
+        placeholder="Select language"
+        clearable={false}
+      />
     </div>
   )
 }

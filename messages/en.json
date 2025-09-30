@@ -9,5 +9,10 @@
     "reels": {
       "title": "Reels English"
     }
+  },
+  "header": {
+    "login": "Login",
+    "sign-up": "Sign Up",
+    "guest": "Guest"
   }
 }
