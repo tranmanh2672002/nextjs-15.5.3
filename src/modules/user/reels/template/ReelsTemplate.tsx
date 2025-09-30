@@ -1,10 +1,6 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
-
 export const ReelsTemplate = () => {
-  const t = useTranslations('user.reels')
-
   const videos = [
     {
       id: 1,

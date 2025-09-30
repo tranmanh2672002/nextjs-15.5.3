@@ -1,12 +1,15 @@
+import './globals.css'
+
 import type { Metadata } from 'next'
+import { NextIntlClientProvider } from 'next-intl'
+import { getLocale } from 'next-intl/server'
 import { Geist, Geist_Mono } from 'next/font/google'
 import NextTopLoader from 'nextjs-toploader'
 import { NuqsAdapter } from 'nuqs/adapters/next/app'
-import './globals.css'
+import { Toaster } from 'sonner'
 
 import QueryProvider from '@/providers/query.provider'
-import { NextIntlClientProvider } from 'next-intl'
-import { getLocale } from 'next-intl/server'
+
 const geistSans = Geist({
   variable: '--font-geist-sans',
   subsets: ['latin'],
@@ -36,6 +39,17 @@ export default async function RootLayout({ children }: Props) {
       >
         <NextIntlClientProvider locale={locale}>
           <NextTopLoader color="#1c6ece" showSpinner={false} height={4} />
+          <Toaster
+            position="top-right"
+            toastOptions={{
+              classNames: {
+                toast: 'min-h-16 bg-white min-w-[376px] w-max',
+                title: 'text-nowrap text-sm text-[#364050] ml-3',
+                closeButton: '!-right-3 !left-auto',
+              },
+              closeButton: true,
+            }}
+          />
           <QueryProvider>
             <NuqsAdapter>{children}</NuqsAdapter>
           </QueryProvider>

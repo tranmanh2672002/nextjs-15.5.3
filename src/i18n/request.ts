@@ -1,6 +1,7 @@
-import { COOKIES } from '@/configs/constants'
-import { getRequestConfig } from 'next-intl/server'
 import { cookies } from 'next/headers'
+import { getRequestConfig } from 'next-intl/server'
+
+import { COOKIES } from '@/configs/constants'
 
 export default getRequestConfig(async () => {
   const store = await cookies()

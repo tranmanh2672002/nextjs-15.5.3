@@ -1,11 +1,12 @@
 'use client'
 
+import { useCookiesNext } from 'cookies-next'
+import { useRouter } from 'next/navigation'
+import { useLocale } from 'next-intl'
+import { useState } from 'react'
+
 import { Button } from '@/components/ui'
 import { COOKIES } from '@/configs/constants'
-import { useCookiesNext } from 'cookies-next'
-import { useLocale } from 'next-intl'
-import { useRouter } from 'next/navigation'
-import { useState } from 'react'
 
 export const MultiLanguage = () => {
   const cookies = useCookiesNext()
