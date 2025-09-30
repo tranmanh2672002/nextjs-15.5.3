@@ -1,8 +1,8 @@
 'use client'
 
 import { useCookiesNext } from 'cookies-next'
-import { useRouter } from 'next/navigation'
 import { useLocale } from 'next-intl'
+import { useRouter } from 'next/navigation'
 import { useState } from 'react'
 
 import { Button } from '@/components/ui'

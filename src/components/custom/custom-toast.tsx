@@ -1,6 +1,5 @@
-import { toast } from 'sonner'
-
 import { CheckCircle, CircleAlert, CircleX } from 'lucide-react'
+import { toast } from 'sonner'
 
 export const customToast = {
   success: (message?: string, options = {}) => {

@@ -1,7 +1,7 @@
 'use client'
 
-import { useTranslations } from 'next-intl'
 import Link from 'next/link'
+import { useTranslations } from 'next-intl'
 
 import { customToast } from '@/components/custom/custom-toast'
 import { Icon } from '@/components/custom/icon'

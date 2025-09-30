@@ -1,5 +1,4 @@
 import { FlatCompat } from '@eslint/eslintrc'
-import simpleImportSort from 'eslint-plugin-simple-import-sort'
 import { dirname } from 'path'
 import { fileURLToPath } from 'url'
 
@@ -23,16 +22,13 @@ const eslintConfig = [
   },
   ...compat.extends('next/core-web-vitals', 'next/typescript'),
   {
-    plugins: {
-      'simple-import-sort': simpleImportSort,
-    },
+    plugins: {},
     rules: {
       'prefer-const': 'error',
       '@typescript-eslint/no-unused-vars': 'error',
       '@typescript-eslint/no-explicit-any': 'warn',
       '@typescript-eslint/consistent-type-imports': 'error',
-      'simple-import-sort/imports': 'error',
-      'simple-import-sort/exports': 'error',
+
       'import/newline-after-import': 'error',
       'import/no-duplicates': 'error',
       'import/first': 'error',
@@ -41,10 +37,7 @@ const eslintConfig = [
   },
   {
     files: ['tailwind.config.*', 'postcss.config.*', 'eslint.config.*', 'src/client/**/*'],
-    rules: {
-      'simple-import-sort/imports': 'off',
-      'simple-import-sort/exports': 'off',
-    },
+    rules: {},
   },
 ]
 
